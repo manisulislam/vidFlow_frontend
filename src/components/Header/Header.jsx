@@ -65,6 +65,12 @@ const Header = () => {
           <Link to="/about-us" className="text-lg font-semibold hover:text-blue-300">
             Contact
           </Link>
+          <Link to="/login" className="text-lg font-semibold hover:text-blue-300">
+            Log In
+          </Link>
+          <Link to="/sign-up" className="text-lg font-semibold hover:text-blue-300">
+            Sign Up
+          </Link>
         </nav>
       </div>
 
