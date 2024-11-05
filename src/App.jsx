@@ -1,4 +1,4 @@
-import WelcomePage from "./components/WelcomePage/WelcomePage"
+
 
 
 function App() {
@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-    <WelcomePage/>
     
+  
     </>
   )
 }
