@@ -1,12 +1,23 @@
 
 import { useForm } from "react-hook-form";
 import {Link} from "react-router-dom"
+import useAuthStore from "../../store/authStore.js"
+
+
 const LogIn = () => {
+  const { login } = useAuthStore();
   const { register, handleSubmit, formState: { errors } ,reset} = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async(data) => {
     console.log(data);
-    reset()
+    try {
+      await login(data);
+      window.location.href = '/about-us'; // Redirect to dashboard after login
+      reset()
+  } catch (error) {
+      console.log(error);
+  }
+    
   };
 
   return (

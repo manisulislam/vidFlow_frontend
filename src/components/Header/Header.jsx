@@ -1,13 +1,24 @@
 import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MenuIcon, XIcon, UserCircleIcon, SearchIcon } from '@heroicons/react/outline';
+import useAuthStore from "../../store/authStore.js"
 
 const Header = () => {
+  const { isAuthenticated, logout } = useAuthStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleLogout= async()=>{
+    try {
+      await logout();
+      window.location.href = '/login'; // Redirect to login page after logging out
+  } catch (error) {
+      console.error("Logout failed:", error);
+  }
+  }
 
   return (
     <>
@@ -65,12 +76,31 @@ const Header = () => {
           <Link to="/about-us" className="text-lg font-semibold hover:text-blue-300">
             Contact
           </Link>
-          <Link to="/login" className="text-lg font-semibold hover:text-blue-300">
-            Log In
-          </Link>
-          <Link to="/sign-up" className="text-lg font-semibold hover:text-blue-300">
-            Sign Up
-          </Link>
+
+          {
+            isAuthenticated ? 
+            <>
+              <button
+                        onClick={handleLogout}
+                        className="bg-red-500 text-white px-4 py-2 rounded"
+                    >
+                        Logout
+                    </button>
+            </>
+            :
+            
+            <>
+              <Link to="/login" className="text-lg font-semibold hover:text-blue-300">
+                  Log In
+              </Link>
+              <Link to="/sign-up" className="text-lg font-semibold hover:text-blue-300">
+                  Sign Up
+              </Link>
+            </>
+          }
+          
+          
+          
         </nav>
       </div>
 
