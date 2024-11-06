@@ -8,6 +8,8 @@ const axiosInstance = axios.create({
     withCredentials: true, // Ensures cookies are sent with requests automatically
 });
 
+
+
 // Intercept response to handle 401 Unauthorized errors
 axiosInstance.interceptors.response.use(
     (response) => response,

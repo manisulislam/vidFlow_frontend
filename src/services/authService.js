@@ -6,8 +6,8 @@ export const signUpUser = async (userData) => {
 };
 
 // Log In User
-export const loginUser = async (credentials) => {
-    return await axiosInstance.post('/api/v1/users/login', credentials);
+export const loginUser = async (data) => {
+    return await axiosInstance.post('/api/v1/users/login', data);
 };
 
 // Log Out User

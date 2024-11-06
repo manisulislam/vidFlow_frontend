@@ -9,7 +9,12 @@ const SignUp = () => {
   const { register, handleSubmit, formState: { errors } ,reset} = useForm();
 
   const onSubmit = async(data) => {
-    console.log(data);
+    
+
+    const {username, email, fullName, password, avatar,coverImage}=data;
+    console.log({
+      username,  email, fullName, password, avatar,coverImage
+    });
     try {
       await signUp(data);
       window.location.href = '/login'; // Redirect to login after signup
