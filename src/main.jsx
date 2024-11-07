@@ -14,8 +14,14 @@ import ProtectedRoute from './components/ProtectedRoute'
 import ProfileDashboard from "./components/Profile/ProfileDashboard"
 import VideoList from "./components/Profile/VideoList"
 import ProfileSettings from "./components/Profile/ProfileSettings"
+import VideoLayout from './Layout/VideoLayout'
+import LikedVideos from './components/Video/LikedVideos'
+import History from './components/Video/History'
+import Playlist from './components/Video/Playlist'
+import AllVideos from './components/Video/AllVideos'
 
 const router= createBrowserRouter([
+  // main layout start
   {
     path:'/',
     element:<Layout/>,
@@ -46,6 +52,8 @@ const router= createBrowserRouter([
     ],
     
   },
+
+  // dashboard layout start
   {
     path:'/dashboard',
     element:<DashboardLayout/>,
@@ -75,6 +83,30 @@ const router= createBrowserRouter([
         ),
       },
 
+    ]
+  },
+
+  // video layout start
+  {
+    path: "/home/video",
+    element: <VideoLayout/>,
+    children:[
+      {
+        path: "liked",
+        element: <LikedVideos/>
+      },
+      {
+        path: "all-videos",
+        element:  <AllVideos/>
+      },
+      {
+        path: "history",
+        element: <History/>
+      },
+      {
+        path: "playlist",
+        element: <Playlist/>
+      }
     ]
   }
 ])

@@ -1,6 +1,6 @@
 // src/components/Sidebar.jsx
 import PropTypes from 'prop-types'; 
-import { UserIcon, VideoCameraIcon, CogIcon,XIcon,HomeIcon } from '@heroicons/react/outline';
+import { UserIcon, VideoCameraIcon, CogIcon,XIcon,HomeIcon,PlayIcon  } from '@heroicons/react/outline';
 import { Link } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggleDrawer }) => (
@@ -31,6 +31,10 @@ const Sidebar = ({ isOpen, toggleDrawer }) => (
       <Link to="/dashboard/settings" className="flex items-center px-4 py-2 text-gray-700 hover:bg-indigo-50">
         <CogIcon className="w-5 h-5 mr-2" />
         Settings
+      </Link>
+      <Link to="/home/video" className="flex items-center px-4 py-2 text-gray-700 hover:bg-indigo-50">
+        <PlayIcon  className="w-5 h-5 mr-2" />
+        Video Home
       </Link>
     </nav>
   </div>

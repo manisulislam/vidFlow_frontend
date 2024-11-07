@@ -30,14 +30,14 @@ const Header = () => {
         </div>
 
         {/* Search Bar */}
-        <div className="hidden md:flex items-center bg-white text-gray-600 rounded-full px-3 py-1 w-1/3">
+        {/* <div className="hidden md:flex items-center bg-white text-gray-600 rounded-full px-3 py-1 w-1/3">
           <SearchIcon className="h-5 w-5 mr-2 text-gray-400" />
           <input
             type="text"
             placeholder="Search..."
             className="bg-transparent w-full focus:outline-none"
           />
-        </div>
+        </div> */}
 
         {/* Icons */}
         <div className="flex items-center space-x-4">
