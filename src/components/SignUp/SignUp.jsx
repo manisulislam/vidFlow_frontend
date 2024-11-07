@@ -11,9 +11,9 @@ const SignUp = () => {
   const onSubmit = async(data) => {
     
 
-    const {username, email, fullName, password, avatar,coverImage}=data;
+    const {username, email, fullName, password}=data;
     console.log({
-      username,  email, fullName, password, avatar,coverImage
+      username,  email, fullName, password
     });
     try {
       await signUp(data);
@@ -79,27 +79,9 @@ const SignUp = () => {
             {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
           </div>
 
-          {/* Avatar */}
-          <div>
-            <label className="block text-blue-600 font-medium mb-1" htmlFor="avatar">Avatar</label>
-            <input
-              id="avatar"
-              type="file"
-              {...register("avatar")}
-              className="w-full px-4 py-2 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
+         
 
-          {/* Cover Image */}
-          <div>
-            <label className="block text-blue-600 font-medium mb-1" htmlFor="coverImage">Cover Image</label>
-            <input
-              id="coverImage"
-              type="file"
-              {...register("coverImage")}
-              className="w-full px-4 py-2 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
+          
           <div>
             <p className="text-1xl">Already have an account please <span className="text-rose-600"><Link to="/login">Log in</Link></span></p>
           </div>

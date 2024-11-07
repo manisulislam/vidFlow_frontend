@@ -42,7 +42,9 @@ const Header = () => {
         {/* Icons */}
         <div className="flex items-center space-x-4">
           {/* Profile Icon */}
-          <UserCircleIcon className="h-8 w-8 cursor-pointer" />
+
+          {isAuthenticated && <Link to="/dashboard"><UserCircleIcon className="h-8 w-8 cursor-pointer" /></Link>}
+          
 
           {/* Hamburger Menu Icon (visible on all screen sizes) */}
           <button onClick={toggleMenu} className="focus:outline-none">

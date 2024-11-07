@@ -12,7 +12,7 @@ const LogIn = () => {
     console.log(data);
     try {
       await login(data);
-      window.location.href = '/about-us'; // Redirect to dashboard after login
+      window.location.href = '/profile'; // Redirect to dashboard after login
       reset()
   } catch (error) {
       console.log(error);
