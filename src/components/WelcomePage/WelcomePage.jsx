@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import backgroundVideo from "../../assets/video/bgVideo.mp4"; // Path to your video file
 import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
+import PricingSection from "../Price/PricingSection";
+
 
 const WelcomePage = () => {
   return (
@@ -38,7 +41,10 @@ const WelcomePage = () => {
     </div>
 
     {/* about us */}
+    <PricingSection/>
     <AboutUs/>
+    <ContactUs/>
+   
     </>
     
   );

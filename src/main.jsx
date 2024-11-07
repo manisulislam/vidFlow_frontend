@@ -19,6 +19,7 @@ import LikedVideos from './components/Video/LikedVideos'
 import History from './components/Video/History'
 import Playlist from './components/Video/Playlist'
 import AllVideos from './components/Video/AllVideos'
+import PricingSection from './components/Price/PricingSection'
 
 const router= createBrowserRouter([
   // main layout start
@@ -41,6 +42,10 @@ const router= createBrowserRouter([
       {
         path:"about-us",
         element:<AboutUs/>
+      },
+      {
+        path:"pricing",
+        element:<PricingSection/>
       },
       {
         path:"contact-us",

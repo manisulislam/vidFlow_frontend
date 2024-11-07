@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MenuIcon, XIcon, UserCircleIcon, SearchIcon } from '@heroicons/react/outline';
+import { MenuIcon, XIcon, UserCircleIcon } from '@heroicons/react/outline';
 import useAuthStore from "../../store/authStore.js"
 
 const Header = () => {
@@ -25,10 +25,14 @@ const Header = () => {
       {/* Header */}
       <header className="flex items-center justify-between bg-blue-600 text-white p-4 shadow-lg">
         {/* Logo */}
+
+        <Link to="/">
         <div className="text-2xl font-bold">
             VidFlow
         </div>
 
+        </Link>
+        
         {/* Search Bar */}
         {/* <div className="hidden md:flex items-center bg-white text-gray-600 rounded-full px-3 py-1 w-1/3">
           <SearchIcon className="h-5 w-5 mr-2 text-gray-400" />
@@ -70,6 +74,9 @@ const Header = () => {
         <nav className="flex flex-col space-y-4 p-4">
           <Link to="/" className="text-lg font-semibold hover:text-blue-300">
             Home
+          </Link>
+          <Link to="/pricing" className="text-lg font-semibold hover:text-blue-300">
+            Pricing
           </Link>
           <Link to="/about-us" href="#about" className="text-lg font-semibold hover:text-blue-300">
             About Us
