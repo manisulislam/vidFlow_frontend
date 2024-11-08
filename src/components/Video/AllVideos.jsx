@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getVideo } from '../../services/videoService.js'; // Adjust the path as needed
 import VideoCard from './VideoCard';
+import PaginationBar from "./PaginationBar"
+import VidFlowLoading from '../VidFlowLoading/VidFlowLoading.jsx';
+
 
 const AllVideos = () => {
   const [videos, setVideos] = useState([]);
@@ -43,13 +46,12 @@ const AllVideos = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <p>Loading...</p>
-      </div>
+      <VidFlowLoading/>
     );
   }
 
   return (
+    <>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {videos.length > 0 ? (
         videos.map((video) => (
@@ -58,7 +60,11 @@ const AllVideos = () => {
       ) : (
         <div className="col-span-full text-center">No videos available</div>
       )}
+     
     </div>
+     <PaginationBar />
+    </>
+    
   );
 };
 

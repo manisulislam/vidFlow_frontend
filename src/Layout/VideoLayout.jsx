@@ -1,7 +1,9 @@
 
+
 import VideoSidebar from '../components/Video/VideoSidebar';
 import { Outlet } from 'react-router-dom';
-import PaginationBar from '../components/Video/PaginationBar';
+import WelcomeMessage from '../components/WelcomeMessage/WelcomeMessage';
+
 
 const VideoLayout = () => {
   return (
@@ -11,8 +13,10 @@ const VideoLayout = () => {
 
       {/* Right Content Area */}
       <main className="w-4/5 p-6 space-y-6 overflow-y-scroll">
-        <Outlet /> {/* Renders the nested routes here */}
-        <PaginationBar />
+        
+        <WelcomeMessage/>
+        <Outlet /> 
+        
       </main>
     </div>
   );

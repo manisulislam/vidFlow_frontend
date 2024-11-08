@@ -1,0 +1,21 @@
+/* WelcomeMessage.css */
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .welcome-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .welcome-message {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+  }
+  
