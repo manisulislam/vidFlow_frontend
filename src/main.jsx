@@ -20,6 +20,7 @@ import History from './components/Video/History'
 import Playlist from './components/Video/Playlist'
 import AllVideos from './components/Video/AllVideos'
 import PricingSection from './components/Price/PricingSection'
+import VideoDetail from './components/Video/VideoDetail'
 
 const router= createBrowserRouter([
   // main layout start
@@ -111,6 +112,10 @@ const router= createBrowserRouter([
       {
         path: "playlist",
         element: <Playlist/>
+      },
+      {
+        path: "video/:id",
+        element: <VideoDetail/>
       }
     ]
   }

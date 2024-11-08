@@ -1,5 +1,6 @@
 // PricingSection.jsx
 import { CheckCircleIcon } from '@heroicons/react/solid';
+import { Link } from 'react-router-dom';
 
 const PricingSection = () => {
   const plans = [
@@ -66,9 +67,13 @@ const PricingSection = () => {
                   </li>
                 ))}
               </ul>
+              <Link to="/home/video">
               <button className="w-full py-2 text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-300">
                 Choose Plan
               </button>
+              
+              </Link>
+              
             </div>
           </div>
         ))}
