@@ -4,7 +4,7 @@ import { MenuAlt3Icon } from '@heroicons/react/outline';
 // import PropTypes from 'prop-types'; 
 import Sidebar from '../components/Sidebar/Sidebar';
 import { Outlet } from "react-router-dom"
-
+import ChannelStatistics from '../components/dashboard/ChannelStatistics';
 
 const DashboardLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +28,7 @@ const DashboardLayout = () => {
           <h1 className="text-2xl font-semibold text-gray-800">User Dashboard</h1>
         </header>
         <main className="flex-1 p-6">
+            <ChannelStatistics/>
             <Outlet/>
         </main>
       </div>

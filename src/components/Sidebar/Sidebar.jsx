@@ -1,6 +1,6 @@
 // src/components/Sidebar.jsx
 import PropTypes from 'prop-types'; 
-import { UserIcon, VideoCameraIcon, CogIcon,XIcon,HomeIcon,PlayIcon  } from '@heroicons/react/outline';
+import { UserIcon, VideoCameraIcon, CogIcon,XIcon,HomeIcon,PlayIcon } from '@heroicons/react/outline';
 import { Link } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggleDrawer }) => (
