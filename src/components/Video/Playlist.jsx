@@ -21,12 +21,13 @@ const Playlist = () => {
   const createPlaylist = async (data) => {
 
     const userData={
-      "name": data.name,
-      "description": data.description
+      name: data.name,
+      description: data.description
     }
     console.log(userData)
     try {
-      await postPlayList('/api/v1/playlist/', userData );
+      const respose= await postPlayList(userData );
+      console.log(respose.data.data)
      
       setShowCreateModal(false);
      

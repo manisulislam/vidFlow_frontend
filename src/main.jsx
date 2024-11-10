@@ -81,6 +81,14 @@ const router= createBrowserRouter([
         ),
       },
       {
+        path: 'playlist',
+        element: (
+          <ProtectedRoute>
+            <Playlist/>
+          </ProtectedRoute>
+        ),
+      },
+      {
         path: 'settings',
         element: (
           <ProtectedRoute>

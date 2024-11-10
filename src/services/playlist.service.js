@@ -22,13 +22,15 @@ export const postPlayList = async (userData) => {
 };
 
 // get play list
-export const GetPlayList = async () => {
-    return await axiosInstance.post('/api/v1/playlist/:playlistId',{
+export const GetPlayList = async (playlistId) => {
+    return await axiosInstance.post(`/api/v1/playlist/${playlistId}`,{
         headers: {
             'Authorization': `Bearer ${getAccessTokenFromCookies()}`
           },
     });
 };
+
+
 // patch play list
 export const patchPlayList = async () => {
     return await axiosInstance.patch('/api/v1/playlist/:playlistId',{
@@ -64,8 +66,8 @@ export const removeVideoFromPlayList = async () => {
     });
 };
 // get user playlist
-export const getUserPlayList = async () => {
-    return await axiosInstance.post('/api/v1/playlist/user/:userId',{
+export const getUserPlayList = async (userId) => {
+    return await axiosInstance.get(`/api/v1/playlist/user/${userId}`,{
         headers: {
             'Authorization': `Bearer ${getAccessTokenFromCookies()}`
           },

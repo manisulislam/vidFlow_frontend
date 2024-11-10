@@ -2,11 +2,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MenuIcon, XIcon,HomeIcon,
   CollectionIcon,
-  BookmarkIcon,
+  
   ClockIcon,
   HeartIcon,
   ViewGridIcon, } from '@heroicons/react/outline';
 
+
+  // BookmarkIcon,
+  
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -55,12 +58,12 @@ const Sidebar = () => {
           
 
 
-          <Link to="/home/video/playlist" onClick={() => setIsOpen(false)}>
+          {/* <Link to="/home/video/playlist" onClick={() => setIsOpen(false)}>
           <li className="hover:bg-white hover:text-black flex items-center space-x-2 p-3 rounded-lg cursor-pointer">
               <BookmarkIcon className="h-6 w-6  hover:text-black" />
               <span>Playlist</span>
           </li>
-          </Link>
+          </Link> */}
 
           <Link to="/home/video/history" onClick={() => setIsOpen(false)} >
           <li className="hover:bg-white hover:text-black p-3 flex items-center space-x-2 rounded-lg cursor-pointer">
